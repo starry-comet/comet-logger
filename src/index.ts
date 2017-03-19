@@ -1,4 +1,4 @@
-import { IBootstrapDependencies, inject, injectable, bootstrap } from 'comet-ioc'
+import { IBootstrapDependencies } from 'comet-ioc'
 import * as winston from 'winston'
 import { isWorker, worker } from 'cluster'
 
