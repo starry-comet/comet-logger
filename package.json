@@ -1,6 +1,6 @@
 {
   "name": "comet-logger",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Logger module used to starry-comet projects.",
   "main": "build/src/index.js",
   "repository": "https://github.com/starry-comet/comet-logger.git",
