@@ -1,0 +1,19 @@
+language: node_js
+
+node_js:
+  - node
+  - lts/boron
+  - lts/argon
+
+before_deploy:
+  - yarn pack --filename package.tgz
+
+deploy:
+  provider: releases
+  api_key:
+    secure: VEeyUPZJiptf6LR9X3RvgLz7QhRvYXO1bk2pap4z5ZgY3kn47t/r3pBoybNAy3UgWmxNzZBEjjLmnxxFsNC6kPSqSnZU7fsn5S1pB0sYLyx1HCFCo0eQnePIoAjAOO7ytlSOieHvE4D3zqhNEmVFneTHtyK0HBmAXI3omT55R6yDmuRPGzg8dVvaflfb6SWXBM0vQ52X/wwEAdLLTp7HTzWqjVF8KkpwnO099zKX3ltHPNAI7MQOsIW+JguZD5vNZehxqInUuONC/J/Wn4BMcN6mGOOkERW8jQMDRYG0j6rdHqrRyUANcF+mtnFOnBFiq/5ZGUG7T77kN7102Jim6rxVCDXlAxVqBY70h0a7RVPcn1/LpdEofMr6WeFDxqYcP6TF+auTCY3oSsQtRcW4Lu65YSOyfmWnoM0gFNMVmaKLAkFS8MedHJyKFbBP6yjZwrKpXhIrwhbiRMeer2WcgxQEp12XBpXF2wlKEF2C9+zjTP5ZoQrmMZxwoi5lc97aWCl/gNs/DNn1mKy2yQI8sdwOyLoxYi9zh32zTC9onjc/fAtF3JLDCbesH97PPdCSVBPtKg2yNuw7j/uEtKNDmHSuuUuZLwx+vxPQR4VE8gqGa+NaUuzJNoomYkff0bU5GJOF6N9bliw2b6RkpWh2OG/XTSGvWBXCcCESXQpu+Hw=
+
+  file: package.tgz
+  on:
+    repo: starry-comet/comet-logger
+    tags: true

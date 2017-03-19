@@ -1,0 +1,34 @@
+{
+  "name": "comet-logger",
+  "version": "0.0.0",
+  "description": "Logger module used to starry-comet projects.",
+  "main": "build/src/index.js",
+  "repository": "https://github.com/starry-comet/comet-logger.git",
+  "author": "Florentin DUBOIS <duboiflorentin@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "prepublish": "tsc",
+    "compile": "tsc",
+    "compile:w": "tsc -w",
+    "dev": "nodemon build/src/index.js",
+    "test": "ts-mocha --colors src/**/*.spec.ts",
+    "tdd": "ts-mocha --colors --reporter mocha-tap-reporter src/**/*.spec.ts"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.40",
+    "@types/winston": "^2.2.0",
+    "mocha": "^3.2.0",
+    "mocha-tap-reporter": "^0.1.3",
+    "nodemon": "^1.11.0",
+    "ts-mocha": "^1.0.3",
+    "typescript": "^2.2.1"
+  },
+  "files": [
+    "build/**/*",
+    "package.json"
+  ],
+  "dependencies": {
+    "comet-ioc": "^1.1.0",
+    "winston": "^2.3.1"
+  }
+}
