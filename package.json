@@ -28,7 +28,7 @@
     "package.json"
   ],
   "dependencies": {
-    "comet-ioc": "^2.0.0",
+    "comet-ioc": "^2.0.2",
     "winston": "^2.3.1"
   }
 }
