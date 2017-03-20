@@ -12,7 +12,7 @@ This project has to main goal to provide a logger to the ioc container from come
 
 ```ts
 import {inject, injectable} from 'comet-ioc'
-import {Logger, LoggerModule} from 'comet-logger'
+import {Logger, LoggerModule, LayerToken, layers} from 'comet-logger'
 
 @injectable()
 class App {
@@ -28,15 +28,19 @@ class App {
 }
 
 bootstrap(App, {
-  imports: [LoggerModule]
+  imports: [LoggerModule],
+  constants: [{
+    provide: LayerToken,
+    useValue: new layers.Console()
+  }]
 })
 ```
 
 results:
 ```
-2017-03-19T22:03:05.993Z - info: [master] info
-2017-03-19T22:03:05.995Z - error: [master] info
-2017-03-19T22:03:05.996Z - warn: [master] info
-2017-03-19T22:03:05.997Z - debug: [master] info
-2017-03-19T22:03:05.997Z - silly: [master] info
+info: info
+error: info
+warn: info
+debug: info
+silly: info
 ```
