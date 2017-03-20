@@ -203,9 +203,9 @@ combined-stream@^1.0.5, combined-stream@~1.0.5:
   dependencies:
     delayed-stream "~1.0.0"
 
-comet-ioc@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/comet-ioc/-/comet-ioc-1.1.0.tgz#a2ab0e78bfb1fe98dd08c0df8e72e221142abbe2"
+comet-ioc@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/comet-ioc/-/comet-ioc-2.0.0.tgz#0ddb1c86f2d3209d82a2d862f4e08ac2d12f789f"
   dependencies:
     inversify "^3.1.0"
     reflect-metadata "^0.1.10"

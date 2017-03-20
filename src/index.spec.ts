@@ -1,11 +1,11 @@
 import { ok } from 'assert'
-import { inject, injectable, bootstrap } from 'comet-ioc'
+import { Inject, Injectable, bootstrap } from 'comet-ioc'
 import { Logger, LoggerModule } from './index'
 
-@injectable()
+@Injectable()
 class App {
 
-  @inject(Logger)
+  @Inject(Logger)
   public $logger: Logger
 }
 
