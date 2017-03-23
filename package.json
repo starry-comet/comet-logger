@@ -6,6 +6,7 @@
   "repository": "https://github.com/starry-comet/comet-logger.git",
   "author": "Florentin DUBOIS <duboiflorentin@gmail.com>",
   "license": "MIT",
+  "types": "build/declarations/index.d.ts",
   "scripts": {
     "prepublish": "tsc",
     "compile": "tsc",
