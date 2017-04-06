@@ -1,4 +1,4 @@
-import { IBootstrapDependencies } from 'comet-ioc'
+import { IBootstrapDependencies, interfaces } from 'comet-ioc'
 import * as winston from 'winston'
 
 import { LoggerToken } from './logger/LoggerToken'
@@ -14,8 +14,10 @@ export const LoggerModule: IBootstrapDependencies = {
     Logger
   ],
 
-  constants: [{
+  providers: [{
     provide: LoggerToken,
-    useValue: new winston.Logger()
+    useFactory(context: interfaces.Context) {
+      return new winston.Logger()
+    }
   }]
 }
